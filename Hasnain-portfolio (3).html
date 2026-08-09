@@ -327,6 +327,11 @@ section.port-section { padding: 5rem 0; }
 .about-card-inner { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
 .about-location { display: flex; align-items: center; gap: .5rem; font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--muted-fg); }
 .about-initials { font-family: 'Space Grotesk', sans-serif; font-size: 4rem; font-weight: 700; background: var(--grad-accent); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.about-photo {
+  width: 6.5rem; height: 6.5rem; border-radius: 9999px;
+  object-fit: cover; border: 2px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
 .about-name { margin-top: .5rem; font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 600; }
 .about-role { font-size: .875rem; color: var(--muted-fg); }
 .about-text { display: flex; flex-direction: column; gap: 1.25rem; color: var(--muted-fg); font-size: 1rem; line-height: 1.75; }
@@ -666,7 +671,7 @@ svg { display: inline-block; vertical-align: middle; }
               Lahore, Pakistan
             </div>
             <div>
-              <div class="about-initials">MHR</div>
+              <img src="profile.jpg" alt="Muhammad Hasnain Rafique" class="about-photo" />
               <p class="about-name font-display">Muhammad Hasnain Rafique</p>
               <p class="about-role">Python Backend Developer</p>
             </div>
