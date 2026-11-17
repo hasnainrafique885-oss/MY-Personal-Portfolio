@@ -1,3 +1,17 @@
+// ─── Marquee (generated, not hardcoded twice) ───
+const MARQUEE_SKILLS = ['Python','Django','FastAPI','Flask','MySQL','REST APIs','Werkzeug','Git'];
+const sparkSvg = '<span class="marquee-spark"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></span>';
+function buildMarqueeGroup() {
+  const group = document.createElement('div');
+  group.className = 'marquee-item';
+  group.innerHTML = MARQUEE_SKILLS.map(s => `${s} ${sparkSvg}`).join(' ');
+  return group;
+}
+const marqueeTrack = document.getElementById('marquee-track');
+// Two copies back-to-back so the shimmer animation loops seamlessly
+marqueeTrack.appendChild(buildMarqueeGroup());
+marqueeTrack.appendChild(buildMarqueeGroup());
+
 // ─── Theme Toggle ───
 const root = document.documentElement;
 const themeBtn = document.getElementById('theme-btn');
@@ -33,7 +47,6 @@ const hamClose = document.getElementById('ham-close');
 let menuOpen = false;
 hamburger.addEventListener('click', () => {
   menuOpen = !menuOpen;
-  hamburger.setAttribute('aria-expanded', menuOpen);
   mobileMenu.classList.toggle('open', menuOpen);
   hamOpen.style.display = menuOpen ? 'none' : '';
   hamClose.style.display = menuOpen ? '' : 'none';
@@ -54,7 +67,7 @@ window.addEventListener('scroll', () => {
 
 // ─── Typewriter ───
 const typeEl = document.getElementById('typewriter');
-const words = ['backend systems.', 'Django web apps.', 'Flask + MySQL services.', 'scalable REST APIs.'];
+const words = ['backend systems.', 'Django + FastAPI APIs.', 'Flask + MySQL services.', 'scalable REST APIs.'];
 let wIdx = 0, cIdx = 0, deleting = false;
 function type() {
   const word = words[wIdx % words.length];
@@ -84,19 +97,3 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => obs.observe(el));
-
-// ─── Contact form ───
-const form = document.getElementById('contact-form');
-const statusEl = document.getElementById('form-status');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  statusEl.textContent = 'Sending…';
-  try {
-    const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-    if (!r.ok) throw new Error();
-    form.reset();
-    statusEl.textContent = 'Message sent. Thank you!';
-  } catch (err) {
-    statusEl.textContent = 'Could not send. Please email me directly instead.';
-  }
-});

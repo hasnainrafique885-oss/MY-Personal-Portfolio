@@ -4,21 +4,19 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Muhammad Hasnain Rafique — Python Backend Developer</title>
-<meta name="description" content="Portfolio of Muhammad Hasnain Rafique — Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, and MySQL. Based in Lahore, Pakistan." />
+<meta name="description" content="Portfolio of Muhammad Hasnain Rafique — Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL. Based in Lahore, Pakistan." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Muhammad Hasnain Rafique — Python Backend Developer" />
-<meta property="og:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, and MySQL. Based in Lahore, Pakistan." />
+<meta property="og:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL. Based in Lahore, Pakistan." />
 <meta name="theme-color" content="#7c3aed" />
 <meta name="twitter:card" content="summary" />
-<!-- Replace YOUR-SITE with your live URL, then add a 1200x630 og-image.png -->
-<meta property="og:url" content="https://YOUR-SITE.vercel.app/" />
-<meta property="og:image" content="https://YOUR-SITE.vercel.app/profile.webp" />
+<!-- TODO after deploy: add <meta property="og:url"> and <meta property="og:image"> with your FULL live URLs (e.g. https://YOUR-SITE.vercel.app/profile.webp) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='41' font-size='24' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EMHR%3C/text%3E%3C/svg%3E" />
 <meta name="twitter:title" content="Muhammad Hasnain Rafique — Python Backend Developer" />
-<meta name="twitter:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, and MySQL." />
+<meta name="twitter:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
 <link rel="stylesheet" href="style.css">
 <noscript><style>.reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important}</style></noscript>
@@ -31,6 +29,9 @@
 
 <!-- Background Layers -->
 <div class="bg-hero-layer"></div>
+<div class="grid-bg"></div>
+<div class="blob-1"></div>
+<div class="blob-2"></div>
 
 <!-- ═══ NAVBAR ═══ -->
 <nav id="navbar">
@@ -52,7 +53,7 @@
         <svg id="theme-icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
       <a href="#contact" class="nav-cta">Contact me</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <svg id="ham-open" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         <svg id="ham-close" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
@@ -76,18 +77,26 @@
       Available for full-time Python Backend roles · Lahore, PK
     </div>
     <h1 class="hero-h1 font-display">
-      I build reliable<br>
+      I build <span class="accent-animated anim-gradient-pan">reliable</span><br>
       <span id="typewriter" class="caret" style="background:var(--grad-accent);-webkit-background-clip:text;background-clip:text;color:transparent"></span>
     </h1>
     <p class="hero-sub">
-      I'm <strong>Muhammad Hasnain Rafique</strong> — a Computer Science graduate (GCUF, 2026) building backend systems with <strong>Python, Django, Flask and MySQL</strong>. Most recently: a <strong>10+ module campus finance ERP</strong> with role-based access and audit logging.
+      I'm <strong>Muhammad Hasnain Rafique</strong> — a Computer Science graduate (GCUF, 2026) building backend systems with <strong>Python, Django, FastAPI, Flask and MySQL</strong>. Most recently: a <strong>10+ module campus finance ERP</strong> with role-based access and audit logging.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">
         View selected work
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
-      <a href="Hasnain_CV.pdf" download="Muhammad Hasnain Rafique CV.pdf" class="btn-secondary btn-cv" id="cv-download-btn">
+      <a href="#contact" class="btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get in touch
+      </a>
+      <a href="https://github.com/hasnainrafique885-oss" target="_blank" rel="noopener" class="btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="Hasnain_Rafique_CV.pdf" download="Muhammad Hasnain Rafique CV.pdf" class="btn-secondary btn-cv" id="cv-download-btn">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download CV
       </a>
@@ -106,19 +115,22 @@
         <div class="stat-label">BS CS · GCUF</div>
       </div>
     </div>
-      </div>
+    <div class="marquee-wrap">
+      <div class="marquee-track anim-shimmer" id="marquee-track"></div>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ PROJECTS ═══ -->
 <section class="port-section" id="projects">
   <div class="container">
-    <h2 class="section-title font-display">Projects, shipped end-to-end.</h2>
+    <p class="section-eyebrow font-mono">01 — Selected Work</p>
+    <h2 class="section-title font-display">Projects, shipped <span class="text-accent">end-to-end</span>.</h2>
     <p class="section-desc">Three projects built solo, each deployed and open source. Backend work first.</p>
     <div class="projects-grid" id="projects-grid">
       <div class="project-card reveal" data-category="Backend">
         <div class="project-card-glow"></div>
         <div class="project-card-body">
-          <div class="project-shot" data-file="shots/nexus-solution.webp"><img src="shots/nexus-solution.webp" alt="Nexus Solution screenshot" loading="lazy" onerror="this.parentElement.classList.add('empty')"></div>
           <div class="project-head">
             <div>
               <div class="project-meta font-mono">2026 · Backend</div>
@@ -155,10 +167,9 @@
         </div>
       </div>
 
-      <div class="project-card featured reveal" data-category="Backend">
+      <div class="project-card reveal" data-category="Backend" style="transition-delay:.08s">
         <div class="project-card-glow"></div>
         <div class="project-card-body">
-          <div class="project-shot" data-file="shots/campus-treasury.webp"><img src="shots/campus-treasury.webp" alt="Campus Treasury screenshot" loading="lazy" onerror="this.parentElement.classList.add('empty')"></div>
           <div class="project-head">
             <div>
               <div class="project-meta font-mono">2026 · Backend</div>
@@ -173,11 +184,11 @@
           <ul class="project-points">
             <li>Fees, transport fees, disciplinary fines, salaries, expenses and budget planning</li>
             <li>Role-based access (Admin / Accountant / Viewer) with audit logging</li>
-            <li>Django backend on MySQL</li>
+            <li>Hybrid Django + FastAPI backend on MySQL</li>
           </ul>
           <div class="project-stack">
             <span class="stack-tag font-mono">Django</span>
-            
+            <span class="stack-tag font-mono">FastAPI</span>
             <span class="stack-tag font-mono">Python</span>
             <span class="stack-tag font-mono">MySQL</span>
             <span class="stack-tag font-mono">RBAC</span>
@@ -198,11 +209,10 @@
       <div class="project-card reveal" data-category="Frontend" style="transition-delay:.16s">
         <div class="project-card-glow"></div>
         <div class="project-card-body">
-          <div class="project-shot" data-file="shots/al-fareed-zarri-house.webp"><img src="shots/al-fareed-zarri-house.webp" alt="Al Fareed Zarri House screenshot" loading="lazy" onerror="this.parentElement.classList.add('empty')"></div>
           <div class="project-head">
             <div>
               <div class="project-meta font-mono">2025 · Frontend</div>
-              <h3 class="project-name font-display">Al Fareed Zarri House</h3>
+              <h3 class="project-name font-display">Al Fareed Zari House</h3>
               <p class="project-tag">Freelance Client Website</p>
             </div>
             <div class="project-arrow">
@@ -239,7 +249,8 @@
 <!-- ═══ SKILLS ═══ -->
 <section class="port-section" id="skills">
   <div class="container">
-    <h2 class="section-title font-display">The stack I work with.</h2>
+    <p class="section-eyebrow font-mono">02 — Toolkit</p>
+    <h2 class="section-title font-display">The stack I <span class="text-accent">work with</span>.</h2>
     <p class="section-desc">What I use to build, grouped by how I use it — no made-up percentages.</p>
     <div class="skills-grid">
       <div class="skill-card reveal">
@@ -249,7 +260,7 @@
         </div>
         <h3 class="skill-cat font-display">Backend</h3>
         <p class="skill-level font-mono">Daily use</p>
-        <div class="skill-tags"><span class="stack-tag font-mono">Python</span><span class="stack-tag font-mono">Flask</span><span class="stack-tag font-mono">Django</span><span class="stack-tag font-mono">REST APIs</span></div>
+        <div class="skill-tags"><span class="stack-tag font-mono">Python</span><span class="stack-tag font-mono">Flask</span><span class="stack-tag font-mono">Django</span><span class="stack-tag font-mono">FastAPI</span><span class="stack-tag font-mono">REST APIs</span></div>
         <p class="skill-level font-mono">Also used</p>
         <div class="skill-tags"><span class="stack-tag font-mono">Flask-Login</span><span class="stack-tag font-mono">Werkzeug</span><span class="stack-tag font-mono">RBAC</span><span class="stack-tag font-mono">Audit logging</span></div>
       </div>
@@ -280,7 +291,8 @@
 <!-- ═══ ABOUT ═══ -->
 <section class="port-section" id="about">
   <div class="container">
-    <h2 class="section-title font-display">A self-driven, ship-first engineer.</h2>
+    <p class="section-eyebrow font-mono">03 — About</p>
+    <h2 class="section-title font-display">A self-driven, <span class="text-accent">ship-first</span> engineer.</h2>
     <div class="about-grid">
       <div class="reveal-left">
         <div class="about-card-wrap">
@@ -306,6 +318,7 @@
         <div class="tech-pills">
           <div class="tech-pill font-mono">Python</div>
           <div class="tech-pill font-mono">Django</div>
+          <div class="tech-pill font-mono">FastAPI</div>
           <div class="tech-pill font-mono">Flask</div>
           <div class="tech-pill font-mono">MySQL</div>
         </div>
@@ -317,7 +330,8 @@
 <!-- ═══ EXPERIENCE / EDUCATION ═══ -->
 <section class="port-section" id="experience">
   <div class="container">
-    <h2 class="section-title font-display">Experience & Education.</h2>
+    <p class="section-eyebrow font-mono">04 — Journey</p>
+    <h2 class="section-title font-display">Experience & <span class="text-accent">Education</span>.</h2>
     <div class="timeline">
       <div class="timeline-line"></div>
       <div class="timeline-item even reveal">
@@ -338,11 +352,22 @@
         <div class="timeline-info">
           <div class="timeline-date font-mono">2025 — Present</div>
           <h3 class="timeline-title font-display">Freelance Web Developer</h3>
-          <p class="timeline-org">Al Fareed Zarri House · client project</p>
+          <p class="timeline-org">Independent Clients</p>
         </div>
-        <div class="timeline-desc">Designed, built and deployed a production website for a Zari embroidery business, handling scope, code and delivery solo.</div>
+        <div class="timeline-desc">Built and deployed production websites including Al Fareed Zari House. Handled scope, design, code and delivery solo.</div>
       </div>
       <div class="timeline-item even reveal">
+        <div class="timeline-dot">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div class="timeline-info">
+          <div class="timeline-date font-mono">2024 — 2026</div>
+          <h3 class="timeline-title font-display">Self-Directed Backend Training</h3>
+          <p class="timeline-org">Open Source · Docs · Real Projects</p>
+        </div>
+        <div class="timeline-desc">Built Campus Treasury — a full campus ERP with fee, salary, expense, and budget modules. Learned Django, FastAPI, MySQL and REST API design by building it.</div>
+      </div>
+      <div class="timeline-item odd reveal">
         <div class="timeline-dot">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
         </div>
@@ -360,7 +385,8 @@
 <!-- ═══ CERTIFICATIONS ═══ -->
 <section class="port-section">
   <div class="container">
-    <h2 class="section-title font-display">Continuous learning.</h2>
+    <p class="section-eyebrow font-mono">05 — Certifications</p>
+    <h2 class="section-title font-display">Continuous <span class="text-accent">learning</span>.</h2>
     <div class="certs-grid">
       <div class="cert-card reveal-left">
         <div class="cert-left">
@@ -389,13 +415,14 @@
 <!-- ═══ CONTACT ═══ -->
 <section class="port-section" id="contact">
   <div class="container">
+    <p class="section-eyebrow font-mono">06 — Contact</p>
     <div class="contact-box reveal">
       <div class="contact-blob-1"></div>
       <div class="contact-blob-2"></div>
       <div class="contact-inner">
         <div>
-          <h2 class="contact-h2 font-display">Let's build something people remember.</h2>
-          <p class="contact-sub">Open to entry-level Python Backend Developer roles in Lahore and remote-friendly opportunities. Send a message and I will get back to you.</p>
+          <h2 class="contact-h2 font-display">Let's build something <span class="text-accent">people remember</span>.</h2>
+          <p class="contact-sub">Open to entry-level Python Backend Developer roles in Lahore and remote-friendly opportunities. Reply within 24 hours.</p>
           <div class="contact-links">
             <a href="https://www.linkedin.com/in/hasnainrafiqueofficial/" target="_blank" rel="noopener" class="contact-link">
               <div class="contact-link-icon"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452z"/></svg></div>
@@ -426,14 +453,6 @@
               </div>
             </a>
           </div>
-          <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label>Name<input type="text" name="name" required autocomplete="name"></label>
-            <label>Email<input type="email" name="email" required autocomplete="email"></label>
-            <label class="full">Message<textarea name="message" rows="4" required></textarea></label>
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-            <button type="submit" class="btn-primary">Send message</button>
-            <p class="form-status" id="form-status" role="status"></p>
-          </form>
         </div>
 
       </div>
