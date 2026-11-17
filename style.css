@@ -475,3 +475,32 @@ section[id] { scroll-margin-top: 5rem; }
 
 /* odd last project card spans full width on desktop */
 @media(min-width:768px){ .projects-grid .project-card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+
+/* ─── Modern refresh ─── */
+:root{--accent:oklch(.55 .2 270);--accent-2:oklch(.62 .14 215);--accent-glow:oklch(.55 .2 270/.2);--grad-accent:linear-gradient(120deg,oklch(.55 .2 270),oklch(.62 .14 215));--grad-hero:radial-gradient(900px 500px at 90% -10%,oklch(.55 .2 270/.10),transparent 60%)}
+.dark{--accent:oklch(.76 .14 270);--accent-2:oklch(.8 .11 215);--accent-glow:oklch(.76 .14 270/.3);--grad-accent:linear-gradient(120deg,oklch(.76 .14 270),oklch(.8 .11 215));--grad-hero:radial-gradient(900px 500px at 90% -10%,oklch(.76 .14 270/.14),transparent 60%)}
+body,.font-display{font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.font-display{letter-spacing:-.03em;font-weight:700}
+.hero-h1{font-size:clamp(2.6rem,7vw,5.5rem);line-height:1.02;letter-spacing:-.045em;font-weight:800}
+.section-title{letter-spacing:-.035em;font-weight:800;max-width:20ch}
+.project-card{border-radius:1.25rem}
+.project-card:hover{transform:none}
+.project-card.featured{grid-column:1/-1;order:-1}
+.project-shot{aspect-ratio:16/10;border-radius:.9rem;overflow:hidden;border:1px solid var(--border);background:var(--muted);margin-bottom:1.25rem;position:relative}
+.project-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.project-shot.empty img{display:none}
+.project-shot.empty::after{content:"Add screenshot: " attr(data-file);position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font:500 .8rem 'JetBrains Mono',monospace;color:var(--muted-fg)}
+@media(min-width:900px){
+ .project-card.featured .project-card-body{display:grid;grid-template-columns:1fr 1.1fr;column-gap:2.5rem;align-items:start}
+ .project-card.featured .project-card-body>*{grid-column:1}
+ .project-card.featured .project-shot{grid-column:2;grid-row:1/span 5;margin:0}
+}
+.contact-form{margin-top:2rem;display:grid;gap:1rem;max-width:34rem}
+@media(min-width:640px){.contact-form{grid-template-columns:1fr 1fr}.contact-form .full,.contact-form button,.form-status{grid-column:1/-1}}
+.contact-form label{display:grid;gap:.4rem;font-size:.875rem;font-weight:500}
+.contact-form input,.contact-form textarea{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--border);border-radius:.75rem;padding:.75rem .9rem}
+.contact-form button{justify-self:start;border:0;cursor:pointer}
+.hp{position:absolute;left:-9999px}
+.form-status{font-size:.875rem;color:var(--muted-fg);min-height:1.2em}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.reveal-left,.reveal-right{opacity:1;transform:none}}
