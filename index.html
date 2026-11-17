@@ -8,32 +8,24 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Muhammad Hasnain Rafique — Python Backend Developer" />
 <meta property="og:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL. Based in Lahore, Pakistan." />
-<meta property="og:url" content="https://hasnain.dev" />
+<meta name="theme-color" content="#7c3aed" />
 <meta name="twitter:card" content="summary" />
+<!-- TODO after deploy: add <meta property="og:url"> and <meta property="og:image"> with your FULL live URLs (e.g. https://YOUR-SITE.vercel.app/profile.webp) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Ctext x='32' y='41' font-size='24' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EMHR%3C/text%3E%3C/svg%3E" />
 <meta name="twitter:title" content="Muhammad Hasnain Rafique — Python Backend Developer" />
 <meta name="twitter:description" content="Computer Science graduate building robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
 <link rel="stylesheet" href="style.css">
+<noscript><style>.reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-
-<!-- Loading Screen -->
-<div id="loading">
-  <div class="loading-inner">
-    <div class="loading-logo">MHR</div>
-    <div style="margin-top:.75rem;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted-fg)">Loading portfolio…</div>
-    <div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div>
-  </div>
-</div>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- Scroll Progress -->
 <div id="scroll-progress"></div>
-
-<!-- Custom Cursor -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
 
 <!-- Background Layers -->
 <div class="bg-hero-layer"></div>
@@ -49,12 +41,10 @@
       <span class="nav-logo-text" style="display:none" id="logo-text">Hasnain<span>.dev</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#feedback">Feedback</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -62,7 +52,7 @@
         <svg id="theme-icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg id="theme-icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <a href="#contact" class="nav-cta">Hire me</a>
+      <a href="#contact" class="nav-cta">Contact me</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <svg id="ham-open" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         <svg id="ham-close" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -70,16 +60,15 @@
     </div>
   </div>
   <div class="mobile-menu glass" id="mobile-menu">
-    <a href="#about" onclick="closeMob()">About</a>
-    <a href="#skills" onclick="closeMob()">Skills</a>
     <a href="#projects" onclick="closeMob()">Projects</a>
+    <a href="#skills" onclick="closeMob()">Skills</a>
+    <a href="#about" onclick="closeMob()">About</a>
     <a href="#experience" onclick="closeMob()">Experience</a>
-    <a href="#services" onclick="closeMob()">Services</a>
-    <a href="#feedback" onclick="closeMob()">Feedback</a>
     <a href="#contact" onclick="closeMob()">Contact</a>
   </div>
 </nav>
 
+<main id="main">
 <!-- ═══ HERO ═══ -->
 <section id="hero">
   <div class="container">
@@ -92,9 +81,7 @@
       <span id="typewriter" class="caret" style="background:var(--grad-accent);-webkit-background-clip:text;background-clip:text;color:transparent"></span>
     </h1>
     <p class="hero-sub">
-      I'm <strong>Muhammad Hasnain Rafique</strong> — a Computer Science graduate from GCUF crafting
-      robust backend systems and REST APIs with Python, Django, Flask, FastAPI, and MySQL. I move fast, ship reliably, and care
-      about the details recruiters notice.
+      I'm <strong>Muhammad Hasnain Rafique</strong> — a Computer Science graduate (GCUF, 2026) building backend systems with <strong>Python, Django, FastAPI, Flask and MySQL</strong>. Most recently: a <strong>10+ module campus finance ERP</strong> with role-based access and audit logging.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">
@@ -105,23 +92,27 @@
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Get in touch
       </a>
-      <a href="Hasnain_Ats.pdf" download="Muhammad Hasnain Rafique CV.pdf" class="btn-secondary btn-cv" id="cv-download-btn">
+      <a href="https://github.com/hasnainrafique885-oss" target="_blank" rel="noopener" class="btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="Hasnains_CV.pdf" download="Muhammad Hasnain Rafique CV.pdf" class="btn-secondary btn-cv" id="cv-download-btn">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download CV
       </a>
     </div>
     <div class="hero-stats">
       <div class="stat-card">
-        <div class="stat-val font-display">3+</div>
-        <div class="stat-label">Projects shipped</div>
+        <div class="stat-val font-display">3</div>
+        <div class="stat-label">Live deployed projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val font-display">10+</div>
+        <div class="stat-label">ERP modules built</div>
       </div>
       <div class="stat-card">
         <div class="stat-val font-display">2026</div>
         <div class="stat-label">BS CS · GCUF</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-val font-display">100%</div>
-        <div class="stat-label">Self-taught</div>
       </div>
     </div>
     <div class="marquee-wrap">
@@ -130,111 +121,12 @@
   </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
-<section class="port-section" id="about">
-  <div class="container">
-    <p class="section-eyebrow font-mono">01 — About</p>
-    <h2 class="section-title font-display">A self-driven, <span class="text-accent">ship-first</span> engineer.</h2>
-    <div class="about-grid">
-      <div class="reveal-left">
-        <div class="about-card-wrap">
-          <div class="about-card">
-            <img src="profile.jpg" alt="Muhammad Hasnain Rafique" class="about-photo-bg" />
-            <div class="about-card-inner">
-              <div class="about-location">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Lahore, Pakistan
-              </div>
-            </div>
-          </div>
-          <div class="about-caption">
-            <p class="about-name font-display">Muhammad Hasnain Rafique</p>
-            <p class="about-role">Python Backend Developer</p>
-          </div>
-        </div>
-      </div>
-      <div class="reveal-right about-text">
-        <p>I'm completing my <strong>BS in Computer Science</strong> at Government College University Faisalabad (2022–2026). Every project on this page was built solo through self-learning — from database schema to deployed APIs.</p>
-        <p>I care about clean backend architecture, secure authentication, well-structured APIs, and code that another developer can pick up tomorrow. I move fast, ask sharp questions, and ship.</p>
-        <p>Looking for an <strong>entry-level Python Backend Developer</strong> role where I can contribute from day one and grow alongside a strong engineering team.</p>
-        <div class="tech-pills">
-          <div class="tech-pill font-mono">Python</div>
-          <div class="tech-pill font-mono">Django</div>
-          <div class="tech-pill font-mono">FastAPI</div>
-          <div class="tech-pill font-mono">Flask</div>
-          <div class="tech-pill font-mono">MySQL</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SKILLS ═══ -->
-<section class="port-section" id="skills">
-  <div class="container">
-    <p class="section-eyebrow font-mono">02 — Toolkit</p>
-    <h2 class="section-title font-display">The stack I <span class="text-accent">work with</span>.</h2>
-    <p class="section-desc">A focused stack chosen for reliability, speed of delivery, and clean developer experience.</p>
-    <div class="skills-grid">
-      <!-- Backend -->
-      <div class="skill-card reveal">
-        <div class="skill-card-glow"></div>
-        <div class="skill-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-        </div>
-        <h3 class="skill-cat font-display">Backend</h3>
-        <ul class="skill-list">
-          <li><div class="skill-row-head"><span>Python</span><span class="skill-pct font-mono">90%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="90"></div></div></li>
-          <li><div class="skill-row-head"><span>Flask</span><span class="skill-pct font-mono">88%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="88"></div></div></li>
-          <li><div class="skill-row-head"><span>Django / FastAPI</span><span class="skill-pct font-mono">80%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="80"></div></div></li>
-          <li><div class="skill-row-head"><span>Flask-Login / Auth</span><span class="skill-pct font-mono">85%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="85"></div></div></li>
-          <li><div class="skill-row-head"><span>REST APIs</span><span class="skill-pct font-mono">82%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="82"></div></div></li>
-          <li><div class="skill-row-head"><span>Werkzeug</span><span class="skill-pct font-mono">80%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="80"></div></div></li>
-        </ul>
-      </div>
-      <!-- DB & Tools -->
-      <div class="skill-card reveal" style="transition-delay:.08s">
-        <div class="skill-card-glow"></div>
-        <div class="skill-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-        </div>
-        <h3 class="skill-cat font-display">Database & Tools</h3>
-        <ul class="skill-list">
-          <li><div class="skill-row-head"><span>MySQL</span><span class="skill-pct font-mono">88%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="88"></div></div></li>
-          <li><div class="skill-row-head"><span>Schema Design</span><span class="skill-pct font-mono">82%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="82"></div></div></li>
-          <li><div class="skill-row-head"><span>Git / GitHub</span><span class="skill-pct font-mono">90%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="90"></div></div></li>
-          <li><div class="skill-row-head"><span>VS Code</span><span class="skill-pct font-mono">95%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="95"></div></div></li>
-          <li><div class="skill-row-head"><span>AI-Assisted Dev</span><span class="skill-pct font-mono">92%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="92"></div></div></li>
-        </ul>
-      </div>
-      <!-- Frontend (basic) -->
-      <div class="skill-card reveal" style="transition-delay:.16s">
-        <div class="skill-card-glow"></div>
-        <div class="skill-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-        </div>
-        <h3 class="skill-cat font-display">Frontend (Basics)</h3>
-        <ul class="skill-list">
-          <li><div class="skill-row-head"><span>HTML5 / CSS3</span><span class="skill-pct font-mono">90%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="90"></div></div></li>
-          <li><div class="skill-row-head"><span>Bootstrap</span><span class="skill-pct font-mono">85%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="85"></div></div></li>
-          <li><div class="skill-row-head"><span>JavaScript (ES6+)</span><span class="skill-pct font-mono">75%</span></div><div class="skill-bar-bg"><div class="skill-bar" data-w="75"></div></div></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ PROJECTS ═══ -->
 <section class="port-section" id="projects">
   <div class="container">
-    <p class="section-eyebrow font-mono">03 — Selected Work</p>
+    <p class="section-eyebrow font-mono">01 — Selected Work</p>
     <h2 class="section-title font-display">Projects, shipped <span class="text-accent">end-to-end</span>.</h2>
-    <p class="section-desc">Three real-world backend-driven products — from database schema to deployed APIs. Filter by category below.</p>
-    <div class="filter-btns">
-      <button class="filter-btn active" data-filter="All">All</button>
-      <button class="filter-btn" data-filter="Backend">Backend</button>
-      <button class="filter-btn" data-filter="Frontend">Frontend</button>
-    </div>
+    <p class="section-desc">Three projects built solo, each deployed and open source. Backend work first.</p>
     <div class="projects-grid" id="projects-grid">
       <div class="project-card reveal" data-category="Backend">
         <div class="project-card-glow"></div>
@@ -249,7 +141,12 @@
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </div>
           </div>
-          <p class="project-desc">Role-based platform for Admin, Faculty, and Students with course enrolment, timetables, announcements, attendance, and secure authentication.</p>
+          <p class="project-desc">Final-year project: a role-based platform where three user types work in one system.</p>
+          <ul class="project-points">
+            <li>Separate Admin, Faculty and Student roles with secure authentication</li>
+            <li>Course enrolment, timetables, attendance and announcements</li>
+            <li>Flask + MySQL backend with Jinja2 / Bootstrap 5 front end</li>
+          </ul>
           <div class="project-stack">
             <span class="stack-tag font-mono">Python</span>
             <span class="stack-tag font-mono">Flask</span>
@@ -258,11 +155,11 @@
             <span class="stack-tag font-mono">Jinja2</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/hasnainrafique885-oss/NEXUS_Solution" target="_blank" class="link-btn">
+            <a href="https://github.com/hasnainrafique885-oss/NEXUS_Solution" target="_blank" rel="noopener" class="link-btn">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               Code
             </a>
-            <a href="https://nexus-campus-manangement-hub.vercel.app/" target="_blank" class="link-btn demo">
+            <a href="https://nexus-campus-manangement-hub.vercel.app/" target="_blank" rel="noopener" class="link-btn demo">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
@@ -283,7 +180,12 @@
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </div>
           </div>
-          <p class="project-desc">A full campus finance &amp; administration platform spanning 10+ modules — fee management, transport fees, disciplinary fines, salaries, expenses, and budget planning — with role-based access (Admin/Accountant/Viewer), audit logging, and a hybrid Django + FastAPI backend.</p>
+          <p class="project-desc">A campus finance &amp; administration ERP spanning 10+ modules.</p>
+          <ul class="project-points">
+            <li>Fees, transport fees, disciplinary fines, salaries, expenses and budget planning</li>
+            <li>Role-based access (Admin / Accountant / Viewer) with audit logging</li>
+            <li>Hybrid Django + FastAPI backend on MySQL</li>
+          </ul>
           <div class="project-stack">
             <span class="stack-tag font-mono">Django</span>
             <span class="stack-tag font-mono">FastAPI</span>
@@ -292,11 +194,11 @@
             <span class="stack-tag font-mono">RBAC</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/hasnainrafique885-oss/CampusTreasury-Web-App" target="_blank" class="link-btn">
+            <a href="https://github.com/hasnainrafique885-oss/CampusTreasury-Web-App" target="_blank" rel="noopener" class="link-btn">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               Code
             </a>
-            <a href="https://campus-treasury-web-app.vercel.app/" target="_blank" class="link-btn demo">
+            <a href="https://campus-treasury-web-app.vercel.app/" target="_blank" rel="noopener" class="link-btn demo">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
@@ -317,7 +219,11 @@
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </div>
           </div>
-          <p class="project-desc">Responsive showcase for a Zari embroidery business with gallery, WhatsApp, Instagram, and Google Maps integration. Production-deployed.</p>
+          <p class="project-desc">Freelance client website for a Zari embroidery business, live in production.</p>
+          <ul class="project-points">
+            <li>Responsive gallery and product showcase</li>
+            <li>WhatsApp, Instagram and Google Maps integration</li>
+          </ul>
           <div class="project-stack">
             <span class="stack-tag font-mono">HTML5</span>
             <span class="stack-tag font-mono">CSS3</span>
@@ -325,15 +231,96 @@
             <span class="stack-tag font-mono">JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/hasnainrafique885-oss/Al-Fareed-Zarri-house" target="_blank" class="link-btn">
+            <a href="https://github.com/hasnainrafique885-oss/Al-Fareed-Zarri-house" target="_blank" rel="noopener" class="link-btn">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               Code
             </a>
-            <a href="https://al-fareed-zarri-house.vercel.app/" target="_blank" class="link-btn demo">
+            <a href="https://al-fareed-zarri-house.vercel.app/" target="_blank" rel="noopener" class="link-btn demo">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Live Demo
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section class="port-section" id="skills">
+  <div class="container">
+    <p class="section-eyebrow font-mono">02 — Toolkit</p>
+    <h2 class="section-title font-display">The stack I <span class="text-accent">work with</span>.</h2>
+    <p class="section-desc">What I use to build, grouped by how I use it — no made-up percentages.</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-glow"></div>
+        <div class="skill-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3 class="skill-cat font-display">Backend</h3>
+        <p class="skill-level font-mono">Daily use</p>
+        <div class="skill-tags"><span class="stack-tag font-mono">Python</span><span class="stack-tag font-mono">Flask</span><span class="stack-tag font-mono">Django</span><span class="stack-tag font-mono">FastAPI</span><span class="stack-tag font-mono">REST APIs</span></div>
+        <p class="skill-level font-mono">Also used</p>
+        <div class="skill-tags"><span class="stack-tag font-mono">Flask-Login</span><span class="stack-tag font-mono">Werkzeug</span><span class="stack-tag font-mono">RBAC</span><span class="stack-tag font-mono">Audit logging</span></div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:0.08s">
+        <div class="skill-card-glow"></div>
+        <div class="skill-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3 class="skill-cat font-display">Database & Tools</h3>
+        <p class="skill-level font-mono">Daily use</p>
+        <div class="skill-tags"><span class="stack-tag font-mono">MySQL</span><span class="stack-tag font-mono">Schema design</span><span class="stack-tag font-mono">Git / GitHub</span><span class="stack-tag font-mono">VS Code</span></div>
+        <p class="skill-level font-mono">Also used</p>
+        <div class="skill-tags"><span class="stack-tag font-mono">AI-assisted dev</span></div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:0.16s">
+        <div class="skill-card-glow"></div>
+        <div class="skill-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <h3 class="skill-cat font-display">Frontend (Basics)</h3>
+        <p class="skill-level font-mono">Comfortable</p>
+        <div class="skill-tags"><span class="stack-tag font-mono">HTML5</span><span class="stack-tag font-mono">CSS3</span><span class="stack-tag font-mono">Bootstrap 5</span><span class="stack-tag font-mono">JavaScript (ES6+)</span><span class="stack-tag font-mono">Jinja2</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="port-section" id="about">
+  <div class="container">
+    <p class="section-eyebrow font-mono">03 — About</p>
+    <h2 class="section-title font-display">A self-driven, <span class="text-accent">ship-first</span> engineer.</h2>
+    <div class="about-grid">
+      <div class="reveal-left">
+        <div class="about-card-wrap">
+          <div class="about-card">
+            <img src="profile.webp" alt="Muhammad Hasnain Rafique" class="about-photo-bg" />
+            <div class="about-card-inner">
+              <div class="about-location">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Lahore, Pakistan
+              </div>
+            </div>
+          </div>
+          <div class="about-caption">
+            <p class="about-name font-display">Muhammad Hasnain Rafique</p>
+            <p class="about-role">Python Backend Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right about-text">
+        <p>I'm completing my <strong>BS in Computer Science</strong> at Government College University Faisalabad (2022–2026). Every project on this page was built solo — from database schema to deployed app.</p>
+        <p>I care about clean backend architecture, secure authentication, well-structured APIs, and code that another developer can pick up tomorrow. I like to ship, then iterate.</p>
+        <p>Looking for an <strong>entry-level Python Backend Developer</strong> role where I can contribute from day one and grow alongside a strong engineering team.</p>
+        <div class="tech-pills">
+          <div class="tech-pill font-mono">Python</div>
+          <div class="tech-pill font-mono">Django</div>
+          <div class="tech-pill font-mono">FastAPI</div>
+          <div class="tech-pill font-mono">Flask</div>
+          <div class="tech-pill font-mono">MySQL</div>
         </div>
       </div>
     </div>
@@ -367,18 +354,18 @@
           <h3 class="timeline-title font-display">Freelance Web Developer</h3>
           <p class="timeline-org">Independent Clients</p>
         </div>
-        <div class="timeline-desc">Built and deployed production websites including Al Fareed Zari House. Handle scope, design, code, and delivery solo.</div>
+        <div class="timeline-desc">Built and deployed production websites including Al Fareed Zari House. Handled scope, design, code and delivery solo.</div>
       </div>
       <div class="timeline-item even reveal">
         <div class="timeline-dot">
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
         </div>
         <div class="timeline-info">
-          <div class="timeline-date font-mono">2024 — 2025</div>
+          <div class="timeline-date font-mono">2024 — 2026</div>
           <h3 class="timeline-title font-display">Self-Directed Backend Training</h3>
           <p class="timeline-org">Open Source · Docs · Real Projects</p>
         </div>
-        <div class="timeline-desc">Built Campus Treasury — a full campus ERP with fee, salary, expense, and budget modules. Mastered Django, FastAPI, MySQL, and REST APIs through real builds.</div>
+        <div class="timeline-desc">Built Campus Treasury — a full campus ERP with fee, salary, expense, and budget modules. Learned Django, FastAPI, MySQL and REST API design by building it.</div>
       </div>
       <div class="timeline-item odd reveal">
         <div class="timeline-dot">
@@ -395,49 +382,10 @@
   </div>
 </section>
 
-<!-- ═══ SERVICES ═══ -->
-<section class="port-section" id="services">
-  <div class="container">
-    <p class="section-eyebrow font-mono">05 — Services</p>
-    <h2 class="section-title font-display">What I can <span class="text-accent">deliver</span>.</h2>
-    <p class="section-desc">Outcome-focused services for startups, agencies, and product teams.</p>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3 class="service-title font-display">REST API Development</h3>
-        <p class="service-desc">Clean, well-documented REST APIs built with Django, Flask, and FastAPI for web and mobile clients.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:.07s">
-        <div class="service-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-        </div>
-        <h3 class="service-title font-display">Backend Architecture</h3>
-        <p class="service-desc">Secure authentication, role-based access control, and scalable server-side logic.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:.14s">
-        <div class="service-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-        </div>
-        <h3 class="service-title font-display">Database Design</h3>
-        <p class="service-desc">Normalized MySQL schemas, efficient queries, and reliable CRUD operations.</p>
-      </div>
-      <div class="service-card reveal" style="transition-delay:.21s">
-        <div class="service-icon">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3 class="service-title font-display">Maintenance & Bugfixes</h3>
-        <p class="service-desc">Refactoring legacy backend code, fixing production issues, and shipping fast iterations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ CERTIFICATIONS ═══ -->
 <section class="port-section">
   <div class="container">
-    <p class="section-eyebrow font-mono">06 — Certifications</p>
+    <p class="section-eyebrow font-mono">05 — Certifications</p>
     <h2 class="section-title font-display">Continuous <span class="text-accent">learning</span>.</h2>
     <div class="certs-grid">
       <div class="cert-card reveal-left">
@@ -460,84 +408,6 @@
         </div>
         <div class="cert-year font-mono">2023</div>
       </div>
-      <div class="cert-card reveal-left">
-        <div class="cert-left">
-          <div class="cert-icon"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
-          <div>
-            <div class="cert-name font-display">MySQL Database Fundamentals</div>
-            <div class="cert-org">Self-paced · Mosh Hamedani</div>
-          </div>
-        </div>
-        <div class="cert-year font-mono">2024</div>
-      </div>
-      <div class="cert-card reveal-right">
-        <div class="cert-left">
-          <div class="cert-icon"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg></div>
-          <div>
-            <div class="cert-name font-display">Git & GitHub Mastery</div>
-            <div class="cert-org">Self-paced</div>
-          </div>
-        </div>
-        <div class="cert-year font-mono">2024</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TESTIMONIALS ═══ -->
-<section class="port-section">
-  <div class="container">
-    <p class="section-eyebrow font-mono">07 — Testimonials</p>
-    <h2 class="section-title font-display">Kind <span class="text-accent">words</span>.</h2>
-    <div class="test-grid">
-      <div class="test-card reveal">
-        <div class="stars">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="test-quote">"Muhammad Hasnain Rafique delivered our website faster than promised. Clean, responsive, and exactly the brand feel we wanted."</p>
-        <div class="test-divider">
-          <div class="test-name font-display">Owner, Al Fareed Zari House</div>
-          <div class="test-role">Freelance Client</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FEEDBACK ═══ -->
-<section class="port-section" id="feedback">
-  <div class="container">
-    <p class="section-eyebrow font-mono">08 — Feedback</p>
-    <h2 class="section-title font-display">Worked with me? <span class="text-accent">Tell me how it went</span>.</h2>
-    <p class="section-desc">Whether it's about a project, an interview, or this portfolio itself — your feedback goes straight to my inbox.</p>
-    <div class="feedback-box reveal">
-      <div class="feedback-blob"></div>
-      <div class="feedback-icon">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </div>
-      <form class="feedback-form" id="feedback-form" action="https://formspree.io/f/myegeykp" method="POST">
-        <div class="feedback-row">
-          <div>
-            <label class="feedback-label" for="fb-name">Name</label>
-            <input class="feedback-input" type="text" id="fb-name" name="name" required />
-          </div>
-          <div>
-            <label class="feedback-label" for="fb-email">Email</label>
-            <input class="feedback-input" type="email" id="fb-email" name="email" required />
-          </div>
-        </div>
-        <div>
-          <label class="feedback-label" for="fb-message">Your feedback</label>
-          <textarea class="feedback-textarea" id="fb-message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="feedback-submit">Send feedback</button>
-        <div class="feedback-status" id="feedback-status"></div>
-        <p class="feedback-note">Feedback is reviewed privately — nothing is posted publicly without your permission.</p>
-      </form>
     </div>
   </div>
 </section>
@@ -545,7 +415,7 @@
 <!-- ═══ CONTACT ═══ -->
 <section class="port-section" id="contact">
   <div class="container">
-    <p class="section-eyebrow font-mono">09 — Contact</p>
+    <p class="section-eyebrow font-mono">06 — Contact</p>
     <div class="contact-box reveal">
       <div class="contact-blob-1"></div>
       <div class="contact-blob-2"></div>
@@ -554,7 +424,7 @@
           <h2 class="contact-h2 font-display">Let's build something <span class="text-accent">people remember</span>.</h2>
           <p class="contact-sub">Open to entry-level Python Backend Developer roles in Lahore and remote-friendly opportunities. Reply within 24 hours.</p>
           <div class="contact-links">
-            <a href="https://www.linkedin.com/in/hasnainrafiqueofficial/" target="_blank" class="contact-link">
+            <a href="https://www.linkedin.com/in/hasnainrafiqueofficial/" target="_blank" rel="noopener" class="contact-link">
               <div class="contact-link-icon"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452z"/></svg></div>
               <div>
                 <div class="contact-link-label">LinkedIn</div>
@@ -568,7 +438,7 @@
                 <div class="contact-link-val">hasnainrafique608@gmail.com</div>
               </div>
             </a>
-            <a href="https://wa.me/923219378515" target="_blank" class="contact-link">
+            <a href="https://wa.me/923219378515" target="_blank" rel="noopener" class="contact-link">
               <div class="contact-link-icon"><svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
               <div>
                 <div class="contact-link-label">WhatsApp</div>
@@ -589,6 +459,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
@@ -598,16 +469,16 @@
       <p class="footer-copy">© 2026 Muhammad Hasnain Rafique. Crafted in Lahore, Pakistan.</p>
     </div>
     <div class="footer-icons">
-      <a href="https://www.linkedin.com/in/hasnainrafiqueofficial/" target="_blank" class="footer-icon" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/hasnainrafiqueofficial/" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452z"/></svg>
       </a>
-      <a href="https://github.com/hasnainrafique885-oss" target="_blank" class="footer-icon" aria-label="GitHub">
+      <a href="https://github.com/hasnainrafique885-oss" target="_blank" rel="noopener" class="footer-icon" aria-label="GitHub">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       </a>
       <a href="mailto:hasnainrafique608@gmail.com" class="footer-icon" aria-label="Email">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </a>
-      <a href="https://wa.me/923219378515" target="_blank" class="footer-icon" aria-label="WhatsApp">
+      <a href="https://wa.me/923219378515" target="_blank" rel="noopener" class="footer-icon" aria-label="WhatsApp">
         <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       </a>
       <a href="tel:+923219378515" class="footer-icon" aria-label="Phone">

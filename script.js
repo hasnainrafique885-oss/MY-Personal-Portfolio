@@ -12,31 +12,22 @@ const marqueeTrack = document.getElementById('marquee-track');
 marqueeTrack.appendChild(buildMarqueeGroup());
 marqueeTrack.appendChild(buildMarqueeGroup());
 
-// ─── Loading Screen ───
-const loadingEl = document.getElementById('loading');
-const loadingBar = document.getElementById('loading-bar');
-let prog = 0;
-const interval = setInterval(() => {
-  prog = Math.min(prog + Math.random() * 12, 95);
-  loadingBar.style.width = prog + '%';
-}, 80);
-window.addEventListener('load', () => {
-  clearInterval(interval);
-  loadingBar.style.width = '100%';
-  setTimeout(() => loadingEl.classList.add('done'), 300);
-});
-
 // ─── Theme Toggle ───
 const root = document.documentElement;
 const themeBtn = document.getElementById('theme-btn');
 const sunIcon = document.getElementById('theme-icon-sun');
 const moonIcon = document.getElementById('theme-icon-moon');
-let dark = false;
-themeBtn.addEventListener('click', () => {
-  dark = !dark;
+let dark = root.classList.contains('dark');
+function applyTheme() {
   root.classList.toggle('dark', dark);
   sunIcon.style.display = dark ? 'none' : '';
   moonIcon.style.display = dark ? '' : 'none';
+}
+applyTheme();
+themeBtn.addEventListener('click', () => {
+  dark = !dark;
+  applyTheme();
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
 });
 
 // ─── Navbar scroll ───
@@ -74,25 +65,6 @@ window.addEventListener('scroll', () => {
   progressBar.style.width = (window.scrollY / total * 100) + '%';
 });
 
-// ─── Custom Cursor ───
-const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursor-ring');
-if (window.matchMedia('(pointer: fine)').matches) {
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    cursorRing.style.left = e.clientX + 'px';
-    cursorRing.style.top = e.clientY + 'px';
-  });
-  document.querySelectorAll('a,button').forEach(el => {
-    el.addEventListener('mouseenter', () => { cursorRing.style.width = '56px'; cursorRing.style.height = '56px'; });
-    el.addEventListener('mouseleave', () => { cursorRing.style.width = '36px'; cursorRing.style.height = '36px'; });
-  });
-} else {
-  cursor.style.display = 'none';
-  cursorRing.style.display = 'none';
-}
-
 // ─── Typewriter ───
 const typeEl = document.getElementById('typewriter');
 const words = ['backend systems.', 'Django + FastAPI APIs.', 'Flask + MySQL services.', 'scalable REST APIs.'];
@@ -113,7 +85,7 @@ function type() {
   typeEl.textContent = word.slice(0, cIdx);
   setTimeout(type, deleting ? 40 : 80);
 }
-type();
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { typeEl.textContent = words[0]; } else { type(); }
 
 // ─── Intersection Observer for reveal animations ───
 const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
@@ -121,74 +93,7 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // Animate skill bars when skills section visible
-      const bars = entry.target.querySelectorAll('.skill-bar');
-      bars.forEach(bar => {
-        bar.style.width = bar.dataset.w + '%';
-      });
     }
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => obs.observe(el));
-
-// Also observe skill cards for bar animation
-document.querySelectorAll('.skill-card').forEach(card => {
-  const barObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.skill-bar').forEach(bar => {
-          setTimeout(() => { bar.style.width = bar.dataset.w + '%'; }, 200);
-        });
-        barObs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  barObs.observe(card);
-});
-
-// ─── Project Filter ───
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    projectCards.forEach(card => {
-      const match = f === 'All' || card.dataset.category === f;
-      card.classList.toggle('hidden', !match);
-    });
-  });
-});
-
-// ─── Feedback Form ───
-const feedbackForm = document.getElementById('feedback-form');
-const feedbackStatus = document.getElementById('feedback-status');
-if (feedbackForm) {
-  feedbackForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const submitBtn = feedbackForm.querySelector('.feedback-submit');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    try {
-      const res = await fetch(feedbackForm.action, {
-        method: 'POST',
-        body: new FormData(feedbackForm),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        feedbackStatus.textContent = "Thanks! Your feedback has been sent.";
-        feedbackStatus.className = 'feedback-status success';
-        feedbackForm.reset();
-      } else {
-        throw new Error('Submit failed');
-      }
-    } catch (err) {
-      feedbackStatus.textContent = "Couldn't send right now — please email me directly instead.";
-      feedbackStatus.className = 'feedback-status error';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send feedback';
-    }
-  });
-}
